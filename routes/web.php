@@ -45,7 +45,19 @@ Route::post('store-service','OurserviceController@store_service')->name('store-s
 Route::get('ourservice','OurserviceController@list_service')->name('list-service');
 Route::get('editform-service/{id}','OurserviceController@editform_service')->name('editform-service');
 Route::post('update-service/{id}','OurserviceController@update_service')->name('update-service');
-Route::get('delete/{id}','OurserviceController@delete_service')->name('delete');
+Route::get('delete-service/{id}','OurserviceController@delete_service')->name('delete-service');
+
+
+Route::post('store-testinomial','TestinomialController@store_testinomial')->name('store-testinomial');
+Route::get('testinomial-form','TestinomialController@testinomial_form')->name('testinomial-form');
+Route::get('testinomial-list','TestinomialController@testinomial_list')->name('testinomial-list');
+Route::get('edit-testinomialform/{id}','TestinomialController@editform_testinomial')->name('editform-testinomial');
+Route::post('update-testinomial/{id}','TestinomialController@update_testinomial')->name('update-testinomial');
+Route::get('delete/{id}','TestinomialController@delete_record')->name('delete-testinomial');
+
+
+
+
 
 Route::post('register-home','HomesettingController@register_homesetting')->name('register-home');
 Route::get('homesitepage','HomesettingController@homesite_page')->name('homesitepage');

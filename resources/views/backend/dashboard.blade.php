@@ -1,4 +1,4 @@
-@extends('backend.master');
+@extends('backend.master')
 @section('nav_bar')
 
 <div id="wrapper">
@@ -59,10 +59,7 @@
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Custom Utilities:</h6>
-                    <a class="collapse-item" href="utilities-color.html">Colors</a>
-                    <a class="collapse-item" href="utilities-border.html">Borders</a>
-                    <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                    <a class="collapse-item" href="utilities-other.html">Other</a>
+
                 </div>
             </div>
         </li>
@@ -86,8 +83,8 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Login Screens:</h6>
                     <a class="collapse-item" href="{{route('list-service')}}">Our Service</a>
-                    <a class="collapse-item" href="register.html">Register</a>
-                    <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                    <a class="collapse-item" href="{{route('register-form')}}">Register</a>
+                    <a class="collapse-item" href="{{route('testinomial-list')}}">Our Testinomial</a>
                     <div class="collapse-divider"></div>
                     <h6 class="collapse-header">Other Pages:</h6>
                     <a class="collapse-item" href="404.html">404 Page</a>
@@ -271,14 +268,4 @@
 
 
 
-@section('footer');
 
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2021</span>
-        </div>
-    </div>
-</footer>
-
-@stop

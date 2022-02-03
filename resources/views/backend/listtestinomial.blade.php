@@ -15,11 +15,11 @@
                       {{-- @if(Session::has('message'))
                       <p class="{{Session::get('class')}}">{{Session::get('message')}}</p>
                       @endif --}}
-                      <h1 class="pull-left">Add Services</h1>
+                      <h1 class="pull-left">Add Testinomial</h1>
                       </div>
 
                       <p>
-                        <a class="btn btn-primary" href="{{route('addservice-form')}}"><span class="glyphicon glyphicon-plus"></span> Add Service</a>
+                        <a class="btn btn-primary" href="{{route('testinomial-form')}}"><span class="glyphicon glyphicon-plus"></span>Create New Record</a>
                     </p>
                     </div>
                     <div class="clearfix"></div>
@@ -27,37 +27,40 @@
                       <table class="table table-striped table-bordered zero-configuration">
                         <thead>
 
+
                           <tr>
 
                             <th>S.no</th>
-                            <th>Service Heading</th>
-                            <th>Icon Heading</th>
+                            <th>Client Name</th>
                             <th>Description</th>
-                            <th>Icon Image</th>
+                            <th>Client Image</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
-                       @foreach ($ourservices as $overservice)
+                        @foreach ($views as $view)
                        <tr>
-                           <td>{{$overservice['id']}}</td>
-                            <td>{{$overservice['service_heading']}}</td>
-                            <td>{{$overservice['icon_heading']}}</td>
-                            <td>{!!$overservice['description']!!}</td>
+                           <td>{{$view['id']}}</td>
+                            <td>{{$view['client_name']}}</td>
+                            <td>{!!$view['description']!!}</td>
+
+
                             <td>
-                               <img src="{{asset('/images/' . $overservice['icon_image'])}}" style="width:80px"  alt="">
+                               <img src="{{asset('/images/' . $view['client_image'])}}" style="width:80px"  alt="">
                             </td>
-                            <td></td>
-                            <td><div class="btn-group mr-1 mb-1">
-                                <button type="button" class="btn btn-drop-table btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-ellipsis-v"></i></button>
-                                <div class="dropdown-menu" >
-                                  <a class="dropdown-item" href="#" > <i class="fa fa-eye"></i>View </a>
-                                  <a class="dropdown-item" href="{{route('editform-service',$overservice['id'])}}"  > <i class="fa fa-edit"></i>Edit</a>
-                                  <a class="dropdown-item" href="{{route('delete-service',$overservice['id'])}}" > <i class="fa fa-trash"></i>Delete</a></div>
-                              </div>
-                            </td>
-                            @endforeach
+
+                            <td>
+                                <div class="btn-group mr-1 mb-1">
+                                     <button type="button" class="btn btn-drop-table btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-ellipsis-v"></i></button>
+                                     <div class="dropdown-menu" >
+                                       <a class="dropdown-item" href="#" > <i class="fa fa-eye"></i>View </a>
+                                       <a class="dropdown-item" href="{{route("editform-testinomial",$view['id'])}}"  > <i class="fa fa-edit"></i>Edit</a>
+                                       <a class="dropdown-item" href="{{route('delete-testinomial',$view['id'])}}" > <i class="fa fa-trash"></i>Delete</a></div>
+                                   </div>
+                                </div>
+                         </td>
                         </tr>
+                        @endforeach
 
                         </tbody>
                       </table>

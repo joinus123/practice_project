@@ -25,7 +25,7 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label>Slider Paragraph</label>
-                                    <textarea class="editor form-control" rows="3" id="section_one_text"    name="slider_p" required>{!! isset($homepage[0]['slider_p'])?$homepage[0]['slider_p']:NULL !!}"
+                                    <textarea class="editor form-control" rows="3" id="section_one_text"    name="slider_p" required>{!! isset($homepage[0]['slider_p'])?$homepage[0]['slider_p']:NULL !!}
                                     </textarea>
                                  </div>
                                 </div>

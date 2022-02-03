@@ -32,6 +32,7 @@ class OurserviceController extends Controller
 
         $imageName = time().".".$request->icon_image->extension();
         $request->icon_image->move(public_path('images'),$imageName);
+        
       }
 
 
